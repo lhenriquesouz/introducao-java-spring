@@ -21,8 +21,7 @@ public class UsuarioController {
 	
 	@Autowired
 	private UsuarioRepositorio usuarioRepo;
-	@Autowired
-	private EstadoRepositorio estadoRepo;
+	
 	
 	@GetMapping("/listarUsuario")
 	public ModelAndView listar() {		
@@ -36,7 +35,6 @@ public class UsuarioController {
 	public ModelAndView cadastrar(Usuario usuario) {
 		ModelAndView mv = new ModelAndView("usuario");
 		mv.addObject("usuario", usuario);
-		mv.addObject("estados", estadoRepo.findAll());
 		
 		return mv;
 	}
