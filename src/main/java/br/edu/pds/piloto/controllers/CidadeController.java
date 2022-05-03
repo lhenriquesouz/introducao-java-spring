@@ -49,7 +49,7 @@ public class CidadeController {
 		
 		cidadeRepo.saveAndFlush(cidade);
 		
-		return listar();
+		return new ModelAndView("redirect:/listarCidade");
 	}
 	
 	@GetMapping("/editarCidade/{id}")
@@ -64,6 +64,6 @@ public class CidadeController {
 		Optional<Cidade> cidade = cidadeRepo.findById(id);
 		cidadeRepo.delete(cidade.get());
 		
-		return listar();		
+		return new ModelAndView("redirect:/listarCidade");		
 	}
 }

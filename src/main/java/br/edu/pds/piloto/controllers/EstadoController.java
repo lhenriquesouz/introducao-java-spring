@@ -45,7 +45,7 @@ public class EstadoController {
 		
 		estadoRepo.saveAndFlush(estado);
 		
-		return listar();
+		return new ModelAndView("redirect:/listarEstado");
 	}
 	
 	@GetMapping("/editarEstado/{id}")
@@ -60,6 +60,6 @@ public class EstadoController {
 		Optional<Estado> estado = estadoRepo.findById(id);
 		estadoRepo.delete(estado.get());
 		
-		return listar();		
+		return new ModelAndView("redirect:/listarEstado");		
 	}
 }

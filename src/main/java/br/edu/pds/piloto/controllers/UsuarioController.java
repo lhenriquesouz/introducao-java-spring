@@ -47,7 +47,7 @@ public class UsuarioController {
 		
 		usuarioRepo.saveAndFlush(usuario);
 		
-		return listar();
+		return new ModelAndView("redirect:/listarUsuario");
 	}
 	
 	@GetMapping("/editarUsuario/{id}")
@@ -62,6 +62,6 @@ public class UsuarioController {
 		Optional<Usuario> usuario = usuarioRepo.findById(id);
 		usuarioRepo.delete(usuario.get());
 		
-		return listar();		
+		return new ModelAndView("redirect:/listarUsuario");		
 	}
 }
