@@ -14,7 +14,6 @@ import org.springframework.web.servlet.ModelAndView;
 
 import br.edu.pds.piloto.domains.Usuario;
 import br.edu.pds.piloto.repositories.UsuarioRepositorio;
-import br.edu.pds.piloto.repositories.EstadoRepositorio;
 
 @Controller
 public class UsuarioController {

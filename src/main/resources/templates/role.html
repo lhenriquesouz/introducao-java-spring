@@ -12,7 +12,7 @@
     </style>
 
     <meta charset="UTF-8">
-    <title>Usuarios</title>
+    <title>Papeis</title>
 </head>
 
 <body class="">
@@ -24,23 +24,18 @@
                 <div class="collapse navbar-collapse" id="navbarsExampleDefault">
                     <ul class="navbar-nav mr-auto">
                         <li class="nav-item active">
-                            <h4>Cadastrar Usuarios</h4>
+                            <h4>Cadastrar papeis</h4>
                         </li>
                     </ul>
                 </div>
             </nav>
 
-            <form action="/salvarUsuario" method="POST" th:object=${usuario}>
+            <form action="/salvarRole" method="POST" th:object=${role}>
                 <div class="form-group border border-primary rounded mt-2 boot">
                     <div class="col-md-6">
-                        <input class="form-control mt-3" type="text" id="nome" autofocus="autofocus" th:field="*{nome}"
-                            value="" placeholder="usuario">
-                            <div class="invalid-feedback"></div>
-                        <br><br>
-                    </div>
-                    <div class="col-md-6">
-                        <input class="form-control" type="password" id="senha" th:field="*{senha}" value=""
-                            placeholder="Senha" />
+                        <label class="align-itens-start" for="nomeRole"></label> 
+                        <input class="form-control mt-3" type="text" id="nomeRole" autofocus="autofocus" th:field="*{nomeRole}"
+                            value="" placeholder="Papeis">
                             <div class="invalid-feedback"></div>
                         <br><br>
                     </div>
