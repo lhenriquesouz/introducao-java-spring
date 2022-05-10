@@ -35,11 +35,13 @@
                     <div class="col-md-6">
                         <input class="form-control mt-3" type="text" id="nome" autofocus="autofocus" th:field="*{nome}"
                             value="" placeholder="usuario">
+                            <div class="invalid-feedback"></div>
                         <br><br>
                     </div>
                     <div class="col-md-6">
                         <input class="form-control" id="senha" th:field="*{senha}" value=""
                             placeholder="Senha" />
+                            <div class="invalid-feedback"></div>
                         <br><br>
                     </div>
 

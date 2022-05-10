@@ -44,7 +44,7 @@ public class Usuario {
 	
 	@Override
 	public String toString() {
-		return senha + " - " + nome;
+		return nome;
 	}
 	@Override
 	public int hashCode() {
