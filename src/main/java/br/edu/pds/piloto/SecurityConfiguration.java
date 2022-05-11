@@ -1,4 +1,4 @@
-package br.edu.pds.piloto;
+/*package br.edu.pds.piloto;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -37,4 +37,4 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter{
 
 	}
 
-}
+}*/

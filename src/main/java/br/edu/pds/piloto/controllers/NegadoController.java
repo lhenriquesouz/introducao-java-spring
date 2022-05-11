@@ -5,11 +5,12 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.servlet.ModelAndView;
 
 @Controller
-public class HomeController {
+public class NegadoController {
 	
-	@GetMapping("/")
-	public ModelAndView home() {		
-		ModelAndView mv = new ModelAndView("index.html");
+	
+	@GetMapping("/negarAcesso")
+	public ModelAndView negar() {		
+		ModelAndView mv = new ModelAndView("negado");
 		
 		return mv;
 	}	

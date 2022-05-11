@@ -5,6 +5,7 @@ import java.util.Optional;
 import javax.validation.Valid;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Controller;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -42,6 +43,10 @@ public class UsuarioController {
 	public ModelAndView salvar(@Valid Usuario usuario, BindingResult result) {		
 		if(result.hasErrors()) {
 			return cadastrar(usuario);
+		}
+		
+		if (usuario.getSenha().length()<20) {
+			usuario.setSenha(new BCryptPasswordEncoder().encode(usuario.getSenha()));
 		}
 		
 		usuarioRepo.saveAndFlush(usuario);
