@@ -34,9 +34,9 @@ public class SecuritySettings extends WebSecurityConfigurerAdapter{
 	
 	protected void configure(HttpSecurity http) throws Exception{
 		http.csrf().disable().authorizeRequests()
-			/*.antMatchers("/listarRole", "/cadastrarRole", "/salvarRole", "/editarRole", "/excluirRole").hasAnyAuthority("role")
+			.antMatchers("/listarRole", "/cadastrarRole", "/salvarRole", "/editarRole", "/excluirRole").hasAnyAuthority("role")
 			.antMatchers("/listarPermissao", "/cadastrarPermissao", "/salvarPermissao", "/editarPermissao", "/excluirPermissao").hasAuthority("permissao")
-			.antMatchers("/listarUsuario", "/cadastrarUsuario", "/salvarUsuario", "/editarUsuario", "/excluirUsuario").hasAuthority("usuario")*/
+			.antMatchers("/listarUsuario", "/cadastrarUsuario", "/salvarUsuario", "/editarUsuario", "/excluirUsuario").hasAuthority("usuario")
 			.antMatchers("/listarCidade", "/cadastrarCidade", "/salvarCidade", "/editarCidade", "/excluirCidade").hasAuthority("cidade")
 			.antMatchers("/listarEstado", "/cadastrarEstado", "/salvarEstado", "/editarEstado", "/excluirEstado").hasAuthority("estado")
 			
