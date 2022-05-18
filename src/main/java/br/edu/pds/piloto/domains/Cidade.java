@@ -8,6 +8,7 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.ManyToOne;
 import javax.persistence.Table;
+import javax.validation.constraints.NotBlank;
 
 @Entity
 @Table(name="cidades")
@@ -20,6 +21,7 @@ public class Cidade {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;	
+	@NotBlank(message = "Preencha o campo cidade devidamente!!!")
 	private String nome;
 	@ManyToOne
 	private Estado estado;

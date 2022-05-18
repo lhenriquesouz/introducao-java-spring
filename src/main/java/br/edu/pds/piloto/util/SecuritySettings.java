@@ -40,7 +40,7 @@ public class SecuritySettings extends WebSecurityConfigurerAdapter{
 			.antMatchers("/listarCidade", "/cadastrarCidade", "/salvarCidade", "/editarCidade", "/excluirCidade").hasAuthority("cidade")
 			.antMatchers("/listarEstado", "/cadastrarEstado", "/salvarEstado", "/editarEstado", "/excluirEstado").hasAuthority("estado")
 			
-				.and().formLogin().permitAll()
+				.and().formLogin().loginPage("/login").permitAll()
 				.and().logout()
 				.logoutRequestMatcher(new AntPathRequestMatcher("/logout"))
 				.logoutSuccessUrl("/")
