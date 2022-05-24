@@ -7,6 +7,8 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
+import javax.validation.constraints.NotBlank;
+import javax.validation.constraints.Size;
 
 @Entity
 @Table(name="estados")
@@ -19,8 +21,12 @@ public class Estado {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;	
+	@NotBlank(message = "Preencha o campo Estado devidamente!!!")
 	private String nome;
+	@NotBlank(message = "Preencha o campo Sigla Estado devidamente!!!")
+	@Size(min=2,max=2)
 	private String sigla;
+
 	
 	public Long getId() {
 		return id;
